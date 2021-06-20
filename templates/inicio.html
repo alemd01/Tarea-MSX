@@ -1,0 +1,19 @@
+{%extends "base.html" %}
+{%block tittle%}
+  <title>Inicio</title>
+{%endblock%}
+
+{%block titulo%}Inicio. Tarea MSX{%endblock%}
+
+{%block menu1%}
+<div id="menubar">
+  <ul id="menu">
+    <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+    <li class="selected"><a href="/">Inicio</a></li>
+    <li><a href="juegos">Juegos</a></li>
+  </ul>
+</div>
+{%endblock%}
+{%block contenido%}
+<a href="/juegos"><img src="{{ url_for('static', filename='msx.png') }}"></a>
+{%endblock%}

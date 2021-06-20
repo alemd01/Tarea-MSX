@@ -1,0 +1,53 @@
+{%extends "base.html" %}
+{%block tittle%}
+  <title>Lista de Juegos</title>
+{%endblock%}
+
+{%block titulo%}<a href="/">Alejandro Montes</a>{%endblock%}
+
+{%block contenido%}
+<div class="main">
+
+<table align="center">
+  <tr>
+
+    <td>
+
+      <a>Nombres</a>
+      <ul>
+        {% for a in lista -%}
+          <li><a>{{a.nombre}}</a></li>
+        {% endfor -%}
+      </ul>
+
+    </td>
+
+    <td>
+
+      <a>Desarrollador</a>
+      <ul>
+        {% for a in lista -%}
+          <li><a>{{a.desarrollador}}</a></li>
+      {% endfor -%}
+      </ul>
+
+    </td>
+
+    <td>
+
+      <a>Más Detalles</a>
+      <ul>
+      {% for a in lista -%}
+          <li><a href="/juego/{{a.id}}">Detalles</a></li>
+          {% endfor -%}
+      </ul>
+
+    </td>
+
+  </tr>
+
+</table>
+</div>
+<a href="/">Inicio</a>
+
+{%endblock%}

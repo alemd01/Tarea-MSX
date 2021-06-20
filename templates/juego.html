@@ -1,0 +1,26 @@
+{%extends "base.html" %}
+{%block tittle%}
+  {% for a in lista -%}
+    {{a.nombre}}
+  {% endfor -%}
+{%endblock%}
+
+{%block titulo%}
+  {% for a in lista -%}
+    <a>{{a.nombre}}</a>
+  {% endfor -%}
+{%endblock%}
+
+{%block contenido%}
+{% for a in lista -%}
+<a>Id:</a><a>{{a.id}}</a> <br>
+<a>Nombre:</a>&nbsp;&nbsp;&nbsp;<a>{{a.nombre}}<br>
+<a>Distribuidor:</a>&nbsp;&nbsp;&nbsp;<a>{{a.distribuidor}}<br>
+<a>Desarrollador:</a>&nbsp;&nbsp;&nbsp;<a>{{a.desarrollador}}<br>
+<a>Categoría:</a>&nbsp;&nbsp;&nbsp;<a>{{a.categoria}}<br>
+<a>Año:</a>&nbsp;&nbsp;&nbsp;<a>{{a.año}}<br>
+{% endfor -%}
+<br>
+
+<a href="/juegos">PAGINA JUEGOS</a>
+{%endblock%}

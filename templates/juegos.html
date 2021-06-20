@@ -1,0 +1,24 @@
+{%extends "base.html" %}
+{%block tittle%}
+  <title>Juegos</title>
+{%endblock%}
+
+{%block titulo%}<a href="/">Juegos</a>{%endblock%}
+{%block menu1%}
+<div id="menubar">
+  <ul id="menu">
+    <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+    <li><a href="/">Inicio</a></li>
+    <li class="selected"><a href="juegos.html">Juegos</a></li>
+  </ul>
+</div>
+{%endblock%}
+{%block contenido%}
+<h3>Buscador</h3>
+<form method="post" name="contact" action="/listajuegos">
+            <label for="author">Buscador</label>
+            <input type="text" name="informacion"/>
+            <div class="cleaner_h10"></div>
+            <input type="submit" value="Enviar" />
+</form>
+{%endblock%}
